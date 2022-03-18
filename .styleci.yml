@@ -1,0 +1,6 @@
+preset: psr-2
+risky: true
+finder:
+  exclude:
+    - vendor
+    - test

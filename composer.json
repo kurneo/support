@@ -1,0 +1,37 @@
+{
+    "name": "kurneo/support",
+    "description": "The kurneo support package.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Giang Nguyen",
+            "email": "giangnguyen.neko.130@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2",
+        "illuminate/cache": "^9.0",
+        "illuminate/contracts": "^9.0",
+        "illuminate/support": "^9.0",
+        "bensampo/laravel-enum": "^5.1"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.4.4",
+        "phpunit/phpunit": "^9.5.10",
+        "symfony/var-dumper": "6.1.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kurneo\\Support\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kurneo\\Support\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "minimum-stability": "dev"
+}
