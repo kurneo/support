@@ -7,11 +7,10 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Traits\Macroable;
 use Kurneo\Support\Contracts\Hook as HookContract;
 use Kurneo\Support\Exceptions\HookException;
-use Kurneo\Support\Traits\Log;
 
 abstract class Hook implements HookContract
 {
-    use Macroable, Log;
+    use Macroable;
 
     /**
      * Array hook
