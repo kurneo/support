@@ -3,7 +3,6 @@
 namespace Kurneo\Support;
 
 use Illuminate\Support\Arr;
-use Throwable;
 
 class Store implements Contracts\Store
 {
@@ -15,23 +14,18 @@ class Store implements Contracts\Store
     /**
      * @param string|array $key
      * @param null $value
-     * @param bool $force
-     * @return bool
+     * @return array
      */
-    public function set(string|array $key, $value = null, bool $force = false): bool
+    public function set(string|array $key, $value = null): array
     {
-        try {
-            if (is_array($key)) {
-                foreach ($key as $k => $v) {
-                    Arr::set($this->data, $k, $v);
-                }
-            } else {
-                Arr::set($this->data, $key, $value);
+        if (is_array($key)) {
+            foreach ($key as $k => $v) {
+                Arr::set($this->data, $k, $v);
             }
-            return true;
-        } catch (Throwable $exception) {
-            return false;
+        } else {
+            Arr::set($this->data, $key, $value);
         }
+        return $this->data;
     }
 
     /**

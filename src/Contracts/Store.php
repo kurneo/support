@@ -19,10 +19,9 @@ interface Store
     /**
      * @param string|array $key
      * @param null $value
-     * @param bool $force
      * @return mixed
      */
-    public function set(string|array $key, $value = null, bool $force = false): bool;
+    public function set(string|array $key, $value = null): array;
 
     /**
      * @param string $key
