@@ -19,12 +19,12 @@ class StoreTest extends TestCase
 
     public function testSet()
     {
-        $this->assertTrue($this->store->set('test-key', 'test'));
+        $this->assertNotEmpty($this->store->set('test-key', 'test'));
     }
 
     public function testSetWithArray()
     {
-        $this->assertTrue($this->store->set(['test-key' => 'test', 'test-key-2' => 'test']));
+        $this->assertNotEmpty($this->store->set(['test-key' => 'test', 'test-key-2' => 'test']));
     }
 
     public function testGet()
